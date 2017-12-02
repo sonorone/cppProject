@@ -23,7 +23,8 @@ int main() {
    ErrorMessage e;
    int ret = 0;
    bool ok = true;
-   cout << T << endl << e << endl << "isClear(): " << (e.isClear() ? "Passed!" : "Failed!") << endl;
+   cout << T << endl
+    << e << endl << "isClear(): " << (e.isClear() ? "Passed!" : "Failed!") << endl;
    if (!e.isClear()) ok = false;
    cout << endl;
    cout << "===========| Long Message\r";

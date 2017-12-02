@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2D24D0B81FCB7AC500FF1F96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D24D0B71FCB7AC500FF1F96 /* main.cpp */; };
+		2D24D0C11FCB7B0400FF1F96 /* ms2_tester.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D24D0BE1FCB7B0300FF1F96 /* ms2_tester.cpp */; };
+		2D24D0C21FCB7B0400FF1F96 /* ErrorMessage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2D24D0BF1FCB7B0400FF1F96 /* ErrorMessage.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,9 @@
 
 /* Begin PBXFileReference section */
 		2D24D0B41FCB7AC400FF1F96 /* ms2 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ms2; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D24D0B71FCB7AC500FF1F96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2D24D0BE1FCB7B0300FF1F96 /* ms2_tester.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ms2_tester.cpp; sourceTree = "<group>"; };
+		2D24D0BF1FCB7B0400FF1F96 /* ErrorMessage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ErrorMessage.cpp; sourceTree = "<group>"; };
+		2D24D0C01FCB7B0400FF1F96 /* ErrorMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ErrorMessage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +60,9 @@
 		2D24D0B61FCB7AC400FF1F96 /* ms2 */ = {
 			isa = PBXGroup;
 			children = (
-				2D24D0B71FCB7AC500FF1F96 /* main.cpp */,
+				2D24D0BF1FCB7B0400FF1F96 /* ErrorMessage.cpp */,
+				2D24D0C01FCB7B0400FF1F96 /* ErrorMessage.h */,
+				2D24D0BE1FCB7B0300FF1F96 /* ms2_tester.cpp */,
 			);
 			path = ms2;
 			sourceTree = "<group>";
@@ -119,7 +124,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D24D0B81FCB7AC500FF1F96 /* main.cpp in Sources */,
+				2D24D0C21FCB7B0400FF1F96 /* ErrorMessage.cpp in Sources */,
+				2D24D0C11FCB7B0400FF1F96 /* ms2_tester.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
