@@ -1,14 +1,14 @@
 // Final Project Milestone 2
 // Version 1.0
 // Date:    November 30, 2017
-// Author   
+// Author:  MURAWIECKI, Damian
 //
 // Revision History
 // -----------------------------------------------------------
 // Name               Date                 Reason
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#include <string>
+#include <cstring>
 #include "ErrorMessage.h"
 
 namespace sict {
@@ -18,11 +18,7 @@ namespace sict {
             addr = nullptr;
         }
         else {
-            std::string s(errorMessage);
-            int size = (int)s.length();
-            addr = new char[size];
-            strncpy(addr, errorMessage, size-1);
-            addr[size] = '\n';
+            copyErrorMsg(errorMessage);
         }
     }
     /* deallocates dynamic memory of an ErrorMessage object */
@@ -38,30 +34,28 @@ namespace sict {
     bool ErrorMessage::isClear() const {
         return (addr == nullptr) ? true : false;
     }
-    /* stores a copy of passed */
+    /* inserts msg into the obj */
     void ErrorMessage::message(const char* str) {
-        delete [] addr;
-        addr = new char[sizeof(str)];
+        if (addr != nullptr) delete [] addr;
         copyErrorMsg(str);
     }
     /* returns message content */
     const char* ErrorMessage::message() const {
         return this->addr;
     }
+    /* inserts error message to the output stream */
+    std::ostream& operator<<(std::ostream& os, const ErrorMessage& er) {
+        if (!er.isClear()) {
+            std::string copy = er.getAddr();
+            std::string s = "test";
+            os << copy;
+        }
+        return os;
+    }
     /* helper function for insertion operator */
     std::string ErrorMessage::getAddr() const {
         return addr;
     }
-    /* inserts error message to the output stream */
-    std::ostream& operator<<(std::ostream& os, const ErrorMessage& er) {
-        if (!er.isClear()) {
-            std::string s(er.getAddr());
-            os << s;
-        }
-        return os;
-    }
-    
-    /* my functions */
     /* copies message, warning: this func doesn't validate...
      * apply only after checking if in an empty state
      */

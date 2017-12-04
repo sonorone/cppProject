@@ -1,7 +1,7 @@
 // Final Project Milestone 2
 // Version 1.0
-// Date	
-// Author	
+// Date:    November 30, 2017
+// Author:  MURAWIECKI, Damian
 //
 //
 // Revision History
